@@ -206,7 +206,7 @@ GameObject:
   - component: {fileID: 509545386}
   - component: {fileID: 509545385}
   m_Layer: 0
-  m_Name: Dom
+  m_Name: Home
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -584,7 +584,7 @@ GameObject:
   - component: {fileID: 1008466838}
   - component: {fileID: 1008466840}
   m_Layer: 0
-  m_Name: Istochnic
+  m_Name: Asource
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
