@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Resours : MonoBehaviour
 {
-    [SerializeField] private int _list;
+    [SerializeField] private int _list; // Лист
     
     public void AddList(int list)
     {

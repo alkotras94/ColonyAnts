@@ -4,19 +4,24 @@ using UnityEngine;
 
 public class MovingII : MonoBehaviour
 {
-    [SerializeField] private Transform _targetIstochnic;
-    [SerializeField] private Transform _targetSclad;
     [SerializeField] private float _speed;
     [SerializeField] private int _list;
     [SerializeField] private Resours _resoursList;
+    public Transform TargetSclad;
+    public Transform TargetIstochnic;
+    [SerializeField] private GameManager _gameManager;
 
     private void Start()
     {
-        _targetIstochnic = null;
+        _gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        _resoursList = GameObject.Find("GameManager").GetComponent<Resours>();
     }
     private void Update()
     {
-        if (_targetIstochnic == null)
+        TargetIstochnic = _gameManager.SheetSource;
+        TargetSclad = _gameManager.TargetSclad;
+
+        if (TargetIstochnic == null)
         {
             transform.position = transform.position;
             Debug.Log("Источника нет");
@@ -24,7 +29,7 @@ public class MovingII : MonoBehaviour
         else
         {
             Moving();
-            Debug.Log("Источника есть");
+            Debug.Log("Источник есть");
         }
             
     }
@@ -33,8 +38,8 @@ public class MovingII : MonoBehaviour
     {
         if (_list == 0)
         {
-            MoveTransform(_targetIstochnic);
-            if (transform.position == _targetIstochnic.position)
+            MoveTransform(TargetIstochnic);
+            if (transform.position == TargetIstochnic.position)
             {
                 _list = 1;
                 Debug.Log("Забрал лист");
@@ -42,8 +47,8 @@ public class MovingII : MonoBehaviour
         }
         else
         {
-            MoveTransform(_targetSclad);
-            if (transform.position == _targetSclad.position)
+            MoveTransform(TargetSclad);
+            if (transform.position == TargetSclad.position)
             {
                 _resoursList.AddList(_list);
                 _list = 0;

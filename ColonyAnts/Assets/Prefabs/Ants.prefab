@@ -94,8 +94,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 009cbc2521dad974e99bf6e272122258, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _targetIstochnic: {fileID: 0}
-  _targetSclad: {fileID: 0}
   _speed: 0.1
   _list: 0
   _resoursList: {fileID: 0}
+  _targetSclad: {fileID: 0}
+  TargetIstochnic: {fileID: 0}
